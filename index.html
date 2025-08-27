@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Formatter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>File Name Formatter</h2>
+
+  <label>File Base Name:</label>
+  <input type="text" id="fileBaseName" placeholder="Enter file name (without extension)">
+
+  <label>File Extension:</label>
+  <input type="text" id="fileExtension" placeholder="Enter file extension like js, ts, txt">
+
+  <label>Format Style:</label>
+  <select id="formatStyle">
+    <option value="camelCase">camelCase</option>
+    <option value="PascalCase">PascalCase</option>
+    <option value="snake_case">snake_case</option>
+    <option value="kebab-case">kebab-case</option>
+  </select>
+
+  <button onclick="formatFileName()">Format File Name</button>
+
+  <!-- Output + Copy Button -->
+  <div id="fileOutputContainer" class="output-container">
+    <span id="fileOutput"></span>
+    <button id="copyBtn" onclick="copyOutput()">Copy</button>
+  </div>
+
+  <!-- Usage Guide -->
+  <div class="note">
+    <b>Usage Guide (React / JS / TS):</b><br><br>
+
+    • <b>camelCase</b> → variables & functions  
+    <span class="example">userName</span>, 
+    <span class="example">getUserData</span>, 
+    <span class="example">handleClick</span>, 
+    <span class="example">isLoading</span><br><br>
+
+    • <b>PascalCase</b> → components & classes  
+    <span class="example">UserProfile</span>, 
+    <span class="example">AppService</span>, 
+    <span class="example">LoginForm</span>, 
+    <span class="example">ProductCard</span><br><br>
+
+    • <b>snake_case</b> → constants & some backend files  
+    <span class="example">user_id</span>, 
+    <span class="example">api_token</span>, 
+    <span class="example">config_file</span><br><br>
+
+    • <b>kebab-case</b> → file names, CSS classes  
+    <span class="example">user-profile.js</span>, 
+    <span class="example">login-form.ts</span>, 
+    <span class="example">product-card.css</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
